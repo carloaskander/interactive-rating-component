@@ -1,0 +1,281 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(216, 12%, 8%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Overpass', sans-serif;
+    color: white;
+}
+
+h1 {
+    font-weight: 500;
+}
+
+p {
+    font-size: 16px;
+    line-height: 25px;
+    color: hsl(217, 12%, 63%);
+}
+
+main {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* border: 2px solid coral; */
+}
+
+.card-one {
+    width: 400px;
+    height: 400px;
+    padding: 40px;
+    border-radius: 25px;
+    background: radial-gradient(circle at top, hsla(213, 20%, 22%, 0.79), hsla(214, 20%, 16%, 0.719), hsla(210, 18%, 13%, 0.593));
+
+    display: flex;
+    flex-direction: column;
+
+    /* display: none; */
+}
+
+.star-wrapper {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: hsl(219, 14%, 20%);
+}
+
+.title-wrapper {
+    margin-bottom: 15px;
+}
+
+.text-wrapper {
+    margin-bottom: 25px;
+}
+
+.rating-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rating {
+    width: 60px;
+    height: 60px;
+    /* 
+    Content of the button had a weird offset from the center,
+    didn't know how to fix it any other way than hard-coding the padding
+    to center the button content.
+    */
+    padding: 5px 0px 0px 1px;
+    margin-bottom: 40px;
+
+    font-size: 18px;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 600;
+    color: hsl(216, 12%, 54%);
+
+    background-color: hsl(219, 14%, 20%);
+
+    border: 0px;
+    border-radius: 50%;
+}
+
+.rating:hover {
+    background-color: hsl(217, 12%, 63%);
+    color: white;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.rating:focus {
+    color: white;
+    background-color:hsl(25, 97%, 53%);
+}
+
+.submit-btn {
+    padding: 15px 0px;
+
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Overpass', sans-serif;
+    color: white;
+    letter-spacing: 2px;
+
+    border-radius: 30px;
+    border: 0px;
+
+    background-color: hsl(25, 97%, 53%);
+}
+
+.submit-btn:hover {
+    background-color: white;
+    color: hsl(25, 97%, 53%);
+
+    transition: 0.3s;
+}
+
+/*
+    ----------------------------------------------
+    -------------- THANK YOU SCREEN --------------
+    ----------------------------------------------
+*/
+
+.card-two {
+    width: 400px;
+    height: 400px;
+    padding: 40px;
+    border-radius: 25px;
+    background: radial-gradient(circle at top, hsla(213, 20%, 22%, 0.79), hsla(214, 20%, 16%, 0.719), hsla(210, 18%, 13%, 0.593));
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    display: none;
+}
+
+.thankyou-icon {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.selection-result {
+    padding: 7px 15px 5px 15px;
+    margin-bottom: 40px;
+
+    border-radius: 20px;
+    color: hsl(25, 97%, 53%);
+    background-color: hsl(219, 14%, 20%);
+}
+
+.thankyou-title {
+    margin-bottom: 10px;
+}
+
+.thankyou-text {
+    padding: 0px 20px;
+    text-align: center;
+}
+
+.attribution {
+    padding: 10px 0px;
+}
+
+@media screen and (max-width: 1080px) {
+    h1 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .card-one {
+        width: 325px;
+        height: 325px;
+        padding: 30px;
+    }
+
+    .star-wrapper {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 30px;
+    }
+
+    .title-wrapper {
+        margin-bottom: 10px;
+    }
+
+    .text-wrapper {
+        margin-bottom: 20px;
+    }
+
+    .rating {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 25px;
+    }
+
+    .submit-btn {
+        padding: 10px 0px;
+        border-radius: 25px;
+        font-size: 18px;
+    }
+
+    .card-two {
+        width: 325px;
+        height: 325px;
+        padding: 30px;
+    }
+
+    .thankyou-icon {
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+
+    .selection-result {
+        margin-bottom: 25px;
+    }
+
+    .thankyou-title {
+
+    }
+}
+
+@media screen and (max-width: 390px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .card-one {
+        width: 295px;
+        height: 320px;
+        padding: 20px;
+    }
+
+    .star-wrapper {
+        margin-bottom: 20px;
+    }
+
+    .rating {
+        width: 45px;
+        height: 45px;
+
+        font-size: 14px;
+    }
+
+    .submit-btn {
+        font-size: 16px;
+    }
+
+    .card-two {
+        width: 295px;
+        height: 320px;
+        padding: 20px;
+    }
+}
